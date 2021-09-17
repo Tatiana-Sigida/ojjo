@@ -11,7 +11,7 @@ a {
 }
 .container-box {
     color: #FFFFFF;
-    width: 1110px;
+    max-width: 1110px;
     margin: 0 auto;
 }
 .top-box .container-box {
@@ -47,10 +47,10 @@ a {
 .user-box img:not(:last-child) {
     margin-right: 29.6px;
 }
-.user-box ul li:not(:last-child) {
+.user-box a:not(:last-child) {
     margin-right: 40px;
 }
-.user-box ul {
+.user-box a {
     display: flex;
     margin-right: 44px;
 }
@@ -66,7 +66,7 @@ a {
     font-size: 36px;
     line-height: 49px;
 }
-.header_center p {
+.header_center a {
     margin-bottom: 50px;
     border: 1px solid #FFFFFF;
     padding: 15px 35px;
@@ -93,7 +93,7 @@ a {
     padding-left: 15px;
 }
 .header_bottom img:last-child {
-    border-right: none
+    border-right: none;
 }
 .second_screen {
     background-color: #E5E5E5;
@@ -112,7 +112,7 @@ a {
     line-height: 140%;
     text-align: center;
 }
-.second_screen .container-box span p {
+.second_screen .container-box .font-bold  {
     padding-bottom: 70px;
     font-family: noto Serif;
     font-style: normal;
@@ -191,7 +191,7 @@ a {
     font-size: 24px;
     line-height: 28px;
     text-align: center;
-    letter-spacing: 0.1em;;
+    letter-spacing: 0.1em;
     padding: 3px 5px;
     text-transform: uppercase;
 } 
@@ -200,7 +200,7 @@ a {
     padding-top: 100px;
     text-align: center;
 }
-.our-salon .container-box h1 {
+.our-salon .container-box .font-size {
     font-family: Gilroy;
     font-style: normal;
     font-weight: normal;
@@ -209,22 +209,21 @@ a {
     margin-bottom: 15px;
 }
 .our-salon .container-box h2 {
-font-family: Noto Serif;
-font-style: normal;
-font-weight: bold;
-font-size: 30px;
-line-height: 41px;
+    font-family: Noto Serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 41px;
+    margin-bottom: 45px;
 }
-.our-salon .container-box p {
+.our-salon .container-box .text-center {
+    width: 730px;
+    margin: auto;
     font-family: Gilroy;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 140%;
-    margin-top: 45px;
-}
-.blog .catalog-box {
-    display: flex;
 }
 .our-salon .container-box .button {
     background-color: #ffffff; 
@@ -244,6 +243,41 @@ line-height: 41px;
     color: black;
     text-align: center;
 }
+.blog .container-box .catalog-box {
+    display: flex;
+}
+.blog .container-box .catalog-box .box {
+    position: relative;
+    margin-right: 30px;
+}
+.blog .container-box .catalog-box .box:last-child {
+    margin-right: 0px;
+}
+.blog .container-box .catalog-box .box img {
+    width: 350px;
+    height: 370px;
+}
+.blog .container-box .catalog-box p {
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 140%;
+    text-align: center;
+    position: absolute;
+    color: #FFFFFF;
+    width: 100%;
+    bottom: 35px;
+    padding: 3px 5px;
+}    
+/* 
+.blog .container-box .box {
+    display: flex;
+}
+.blog .container-box .box img {
+    width: 350px;
+    height: 370px;
+} */
 .blog .container-box h2 {
     font-family: Gilroy;
     font-style: normal;
@@ -262,13 +296,6 @@ line-height: 41px;
     text-align: center;
     margin-bottom: 60px;
     margin-top: 15px;
-}
-.blog .container-box .box {
-    display: flex;
-}
-.blog .container-box .box img {
-    width: 350px;
-    height: 370px;
 }
 .blog .container-box .button {
     background-color: rgba(51, 51, 51, 1);
@@ -308,8 +335,15 @@ line-height: 41px;
 .gallery .container-box .gallery-box .a {
     display: flex;
 }
+.gallery .container-box .gallery-box .img1 {
+    display: flex;
+}
 .gallery .container-box .gallery-box .b {
-    display: flex; flex-direction: row-reverse;
+    display: flex; 
+    flex-direction: row-reverse;
+}
+.gallery .container-box .gallery-box .img2 {
+    display: flex;
 }
 .subscribe {
     background: url(../images/our_salon_bg.png) no-repeat;
@@ -321,7 +355,6 @@ line-height: 41px;
 .subscribe .container-box .padding {
     padding: 0 150px;  
 }
-
 .subscribe .container-box .sub-box {
     display: flex;
     align-items: center;
@@ -380,13 +413,9 @@ line-height: 41px;
     text-transform: uppercase;
 } 
 .subscribe .container-box .subscribe-form {
-    padding: 14px 15px;
     margin-left: 80px;
-}
-.subscribe .container-box .subscribe-form form {
     background: white;
     padding: 20px 22px;
-    display: flex;
 }
 .subscribe .container-box .mail {
     color: rgba(51, 51, 51, 0.5);
@@ -415,6 +444,7 @@ line-height: 41px;
     background: #333333;
     border: 1px solid #FFFFFF;
     padding: 14px 35px;
+    cursor: pointer;
 }
 .footer .container-box {
     color: black;
@@ -425,14 +455,16 @@ line-height: 41px;
     margin-bottom: 45px;
     justify-content: space-between;
 }
+.footer .container-box .container-top p,
+.footer .container-box .container-top ul,
 .footer .container-box .container-top a {
-    color: black;
     font-family: Gilroy;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 150%;
-}
+    color: black;
+} 
 .footer .container-box .container-top h2 {
     font-style: normal;
     font-weight: 500;
@@ -443,23 +475,28 @@ line-height: 41px;
     color: #333333;
     border-bottom: 1px solid #333333;
     padding-bottom: 10px;
+    margin-bottom: 30px;
+    width: 255px;
 }
-.footer .container-box .container-top p {
+.footer .container-box .container-top ul li {
     font-family: Gilroy;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 150%;
-    padding-bottom: 15px;
 }   
-.footer .container-box .container-top span p {
-    padding-top: 30px;
+.footer .container-box .container-top ul li:not(:last-child) {
+    margin-bottom: 15px;
 }
-.footer .container-box .container-top .footer_column_2 .img_pay {
+
+ .footer .container-box .container-top .footer_column_2 .img_pay {
     margin-top: 21px;
 }
 .footer .container-box .container-top .footer_column_2 img:not(:last-child) {
     margin-right: 21px;
+}
+.footer .container-box .container-top .footer_column_3 p:not(:last-child) {
+    margin-bottom: 15px;
 }
 .footer .container-box .container-top .footer_column_4 .footer_social {
     margin-top: 21px;
@@ -486,10 +523,19 @@ line-height: 41px;
     line-height: 150%;
     color: black;
 }
-.footer .container-box .container-bottom span{
+.footer .container-box .container-bottom a {
     font-family: Gilroy;
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
+    text-decoration-line: underline;
+}
+.footer .container-box .container-bottom .font p {
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 150%;
+    text-align: right;
     text-decoration-line: underline;
 }

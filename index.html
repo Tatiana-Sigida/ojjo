@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>OJJO</title>
     <link
       rel="stylesheet"
       href="https://cdn.rawgit.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css"
@@ -26,19 +26,25 @@
           </nav>
           <div class="logo-box">
             <!-- лого должно быть ссылкой -->
-            <img src="./images/header_logo.png" alt="Вернуться на главную" />
+            <a href="/">
+              <img src="./images/header_logo.png" alt="Вернуться на главную" />
+            </a>
           </div>
           <nav class="user-box">
             <!-- img должен быть обернут в тег, к примеру span -->
-            <img src="./images/header_look.png" />
+            <a href="#">
+              <img src="./images/header_look.png" />
+            </a>
             <!-- вынести ссылки из ul -->
-            <ul>
-              <li><a href="#">Поиск</a></li>
-              <li><a href="#">Вход/Регистрация </a></li>
-            </ul>
+              <a href="#">Поиск</a>
+              <a href="#">Вход/Регистрация </a>
             <!-- img должен быть обернут в тег a -->
-            <img src="./images/header_person.png" />
-            <img src="./images/header_like.png" />
+            <a href="#">
+                <img src="./images/header_person.png" />
+            </a>
+            <a href="#">
+                <img src="./images/header_like.png" />
+            </a>
           </nav>
         </div>
       </div>
@@ -46,7 +52,7 @@
         <div class="container-box">
           <h1>Долго, дорого, богато!</h1>
           <!-- можно убрать p -->
-          <p><a href="#">каталог изделий</a></p>
+          <a href="#">каталог изделий</a>
         </div>
       </div>
       <div class="header_bottom">
@@ -64,9 +70,7 @@
       <div class="container-box">
         <p>К мероприятиям</p>
         <!-- span убрать, для этого добавить класс p -->
-        <span>
-          <p>Настоящая красота здесь!</p>
-        </span>
+          <p class="font-bold">Настоящая красота здесь!</p>
         <div class="category-box">
           <a href="#">
             <p>СВАДЬБА</p>
@@ -130,17 +134,14 @@
     <section class="our-salon">
       <div class="container-box">
         <!-- h1 убрать, вместо него p -->
-        <h1>Не знаете, что выбрать?</h1>
+        <p class="font-size">Не знаете, что выбрать?</p>
         <h2>Посетите наши салоны в Москве</h2>
         <!-- убрать br -->
-        <p>
+        <p class="text-center">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut duis
-          tortor vitae pellentesque <br />
-          egestas quam pulvinar. Pellentesque porttitor velit sit pellentesque.
-          Suspendisse donec <br />
-          pretium id dignissim. Dignissim ultrices eget orci viverra. Egestas
-          quis et ut ultrices <br />
-          imperdiet lectus nulla tempus. Pharetra lorem sem purus nisi libero
+          tortor vitae pellentesque egestas quam pulvinar. Pellentesque porttitor velit sit pellentesque.
+          Suspendisse donec  pretium id dignissim. Dignissim ultrices eget orci viverra. Egestas
+          quis et ut ultrices imperdiet lectus nulla tempus. Pharetra lorem sem purus nisi libero
           viverra ipsum.
         </p>
         <a class="button" href="#">наши салоны</a>
@@ -156,19 +157,19 @@
           <div class="box">
             <a href="#">
               <img src="./images/1.svg" />
-              <p>Как выбрать часы для своей будущей жены</p>
+              <p>Как выбрать <br> часы для своей <br> будущей жены</p>
             </a>
           </div>
           <div class="box">
             <a href="#">
               <img src="./images/2.svg" />
-              <p>Запонки для мужа: 7 ключевых правил покупки аксессуара</p>
+              <p>Запонки для мужа: <br> 7 ключевых правил <br> покупки аксессуара</p>
             </a>
           </div>
           <div class="box">
             <a href="#">
               <img src="./images/3.svg" />
-              <p>Как выбрать обручальные кольца молодоженам</p>
+              <p>Как выбрать <br> обручальные кольца <br> молодоженам</p>
             </a>
           </div>
         </div>
@@ -182,26 +183,33 @@
         <div class="gallery-box">
           <div class="a">
             <!-- не правильно, 2 блока -> в 1 большая картинка, во втором еще 2 блока -->
-            <a href="#">
-              <img src="./images/video1.png" />
-            </a>
-            <a href="#">
-              <img src="./images/gallery__image1.png" />
-            </a>
-            <a href="#">
-              <img src="./images/gallery__image2.png" />
-            </a>
+            <div class="video1">
+                <a href="#">
+                <img src="./images/video1.png" />
+                </a>
+            </div>
+            <div class="img1">
+                <a href="#">
+                <img src="./images/gallery__image1.png" />
+                </a>
+                <a href="#">
+                <img src="./images/gallery__image2.png" />
+                </a>
+            </div>
           </div>
           <div class="b">
-            <a href="#">
-              <img src="./images/video2.png" />
-            </a>
-            <a href="#">
-              <img src="./images/gallery__image3.png" />
+              <div class="video2">
+                    <a href="#">
+                    <img src="./images/video2.png" />
+                    </a>
+              </div>
+            <div class="img2">
+                <img src="./images/gallery__image3.png" />
             </a>
             <a href="#">
               <img src="./images/gallery__image4.png" />
             </a>
+            </div>
           </div>
         </div>
       </div>
@@ -234,7 +242,10 @@
                   placeholder="ваш e-mail"
                 />
                 <!-- нет курсора css -->
-                <input class="btn" type="submit" value="отправить" />
+                <input
+                    class="btn"
+                    type="submit" 
+                    value="отправить" />
               </form>
             </div>
           </div>
@@ -248,22 +259,21 @@
             <div class="footer_column_1">
               <h2>Полезные ссылки</h2>
               <!-- сам поймешь, убрать везде, тут должен быть список -->
-              <span>
-                <p>Доставка</p>
-              </span>
-              <p>Оплата</p>
-              <p>Акции</p>
-              <p>Политика конфиденциальности</p>
+              <ul>
+                <li>Доставка</li>
+                <li>Оплата</li>
+                <li>Акции</li>
+                <li>Политика конфиденциальности</li>
+              </ul>    
             </div>
+
             <div class="footer_column_2">
               <h2>Оплата</h2>
-              <span>
                 <p>
                   Lorem ipsum dolor sit amet,<br />
                   consectetur adipiscing elit. Ullamcorper <br />
                   justo, nec, pellentesque.
                 </p>
-              </span>
               <div class="img_pay">
                 <img src="./images/footer_pay_1.png" />
                 <img src="./images/footer_pay_2.png" />
@@ -271,12 +281,10 @@
             </div>
             <div class="footer_column_3">
               <h2>Контакты</h2>
-              <span>
                 <p>
                   <img src="./images/footer_tel.png" />
                   <a href="tel:88122345655">8 (812) 234-56-55</a>
                 </p>
-              </span>
               <p>
                 <img src="./images/footer_tel.png" />
                 <a href="tel:88122345655">8 (812) 234-56-55</a>
@@ -288,13 +296,11 @@
             </div>
             <div class="footer_column_4">
               <h2>Социальные сети</h2>
-              <span>
                 <p>
                   Lorem ipsum dolor sit amet,<br />
                   consectetur adipiscing elit. Ullamcorper <br />
                   justo, nec, pellentesque.
                 </p>
-              </span>
               <div class="footer_social">
                 <img src="./images/footer_social_1.png" />
                 <img src="./images/footer_social_2.png" />
@@ -310,12 +316,14 @@
               <p>Договор публичной офферты</p>
             </a>
             <!-- чет забыла -->
-            <a href="">
+            <a href="#">
               <p>Контрагентам</p>
             </a>
             <span>
               <!-- должна быть ссылка -->
-              <p><strong>Сделано Figma.info</strong></p>
+              <a class="font" href="#">
+                <p>Сделано Figma.info</p>      
+              </a>
             </span>
           </div>
         </div>
