@@ -11,13 +11,13 @@ a {
 }
 .container-box {
     color: #FFFFFF;
-    max-width: 1110px;
+    width: 1110px;
     margin: 0 auto;
 }
+
 .top-box .container-box {
     display: flex;
     justify-content: space-around;
-    width: 1100px;
 }
 .menu-box {
     padding-top: 43px;
@@ -53,6 +53,9 @@ a {
 .user-box a {
     display: flex;
     margin-right: 44px;
+}
+.user-box a:last-child {
+    margin-right: 0;
 }
 .header_center {
     padding-top: 600px;
@@ -269,15 +272,7 @@ a {
     width: 100%;
     bottom: 35px;
     padding: 3px 5px;
-}    
-/* 
-.blog .container-box .box {
-    display: flex;
-}
-.blog .container-box .box img {
-    width: 350px;
-    height: 370px;
-} */
+}  
 .blog .container-box h2 {
     font-family: Gilroy;
     font-style: normal;
@@ -456,7 +451,7 @@ a {
     justify-content: space-between;
 }
 .footer .container-box .container-top p,
-.footer .container-box .container-top ul,
+.footer .container-box .container-top ul li,
 .footer .container-box .container-top a {
     font-family: Gilroy;
     font-style: normal;
@@ -539,3 +534,209 @@ a {
     text-align: right;
     text-decoration-line: underline;
 }
+ @media (max-width: 1194px)  {
+    .container-box {
+        max-width: 1070px;
+    }
+    .header_bottom img {
+        max-width: 180px;
+    }
+    .second_screen .container-box {
+        width: 1105px;
+    }
+    .second_screen .container-box .category-box {
+        max-width: 1070px;
+    }
+    .second_screen .container-box .catalog-box {
+        justify-content: center;
+    }
+    .second_screen .container-box .catalog-box .catalog-item img {
+        width: 320px;
+        height: 250px;
+    }
+    .blog .container-box .catalog-box {
+        align-items: center;
+        justify-content: center;
+    }
+    .blog .container-box .catalog-box .box img {
+        width: 320px;
+        height: 340px;
+    }
+    .gallery .container-box .gallery-box {
+        max-width: 1050px;
+    }
+    .footer .container-box {
+        max-width: 1050px;
+    }
+}
+
+@media (max-width:1110px) {
+    .container-box {
+        width: 970px;
+        padding: 0 15px;
+        align-items: center;
+        justify-self: center;
+    }
+    .top-box .container-box {
+        flex-direction: column;
+        align-items: center;
+    }
+    .header_center {
+        padding-top: 250px;
+    }
+    .header_bottom .container-box {
+        justify-content: center;
+    }
+    .header_bottom img {
+        padding: 0 5px;
+        max-width: 160px;
+    }
+    .second_screen .container-box {
+        width: 80%;
+    }
+    .second_screen .container-box .category-box {
+        justify-content: space-evenly;
+    }
+    .second_screen .container-box .category-box p {
+        font-size: 15px;
+    }
+    .second_screen .container-box .catalog-box {
+        justify-content: center;
+    }
+     .second_screen .container-box .catalog-box .catalog-item:nth-of-type(3n+3) {
+        margin-right: 30px;
+    } 
+    .second_screen .container-box .catalog-box .catalog-item:nth-of-type(2n+2) {
+        margin-right: 0;
+    }
+
+    .subscribe .container-box .padding {
+        padding: 0;
+    }
+    .subscribe .container-box .sub-box {
+        justify-content: center;
+    }
+    .footer .container-box .container-top h2 { 
+        font-size: 14px;
+        width: auto;
+    }
+    .footer .container-box .container-top p,
+    .footer .container-box .container-top ul li,
+    .footer .container-box .container-top a {
+        font-size: 14px;
+    }
+}
+@media (max-width:992px) {
+    .container-box {
+        width: 800px;
+    }
+    .header_center h1 {
+        font-size: 32px;
+    }
+    .second_screen .container-box {
+        padding-top: 80px;
+        padding-bottom: 90px;
+    }
+    .second_screen .container-box .catalog-box {
+        align-items: center;
+        justify-content: center;
+    }
+    .second_screen .container-box .catalog-box p {
+        font-size: 20px;
+    }
+    .second_screen .container-box .catalog-box .catalog-item:nth-of-type(2n+2) {
+        margin-right: 0; 
+    }
+    .second_screen .container-box p {
+        padding-bottom: 50px;
+    }
+    .blog .container-box h2 {
+        margin-top: 90px;
+    }
+    .blog .container-box h3 {
+        margin-bottom: 40px;
+    }
+    .blog .container-box .button {
+        margin-top: 55px;
+        margin-bottom: 80px;
+    }
+    .blog .container-box .catalog-box {
+        max-width: 850px;
+        margin: auto;
+    }
+    .blog .container-box .catalog-box p {
+        font-size: 16px;
+        bottom: 70px;
+    }
+   .subscribe {
+        padding-top: 100px;
+        margin-top: 90px;
+    }
+    .footer .container-box .container-top h2 {
+        font-size: 12px;
+    }
+    .footer .container-box .container-top p,
+    .footer .container-box .container-top ul li,
+    .footer .container-box .container-top a {
+         font-size: 12px;
+         margin-right: 10px;
+    }
+     
+@media (max-width:767px) {
+     .container-box {
+        width: 100%;
+    }
+    .second_screen .container-box {
+        padding: 70px 0;
+        
+    }
+    .header_bottom img {
+        max-width: 120px;
+    }
+    .second_screen .container-box p {
+        padding-bottom: 40px;
+    }
+    .second_screen .container-box .font-bold {
+        padding-bottom: 50px;
+        font-size: 25px;
+    }
+    .second_screen .container-box .category-box p {
+        font-size: 12px;
+    }
+    .second_screen .container-box .category-box a {
+        font-size: 12px;
+    }
+    .second_screen .container-box .catalog-box p {
+        font-size: 16px;
+    }
+    .second_screen .container-box .catalog-box .catalog-item img {
+        width: 280px;
+        height: 210px;
+    }
+    .our-salon {
+        padding-top: 80px;   
+    }
+    .our-salon .container-box .font-size {
+        font-size: 18px;
+    }
+    .our-salon .container-box h2 {
+        font-size: 25px;
+    }
+    .our-salon .container-box .text-center {
+        font-size: 16px;
+    }
+    .our-salon .container-box .button {
+        padding: 15px 28px;
+        font-size: 15px;
+    }
+    .blog .container-box h2 {
+        margin-top: 70px;
+    }
+    .blog .container-box h3 {
+        font-size: 25px;
+    }
+    .blog .container-box .catalog-box p {
+        font-size: 16px;
+        bottom: 70px;
+    }
+} 
