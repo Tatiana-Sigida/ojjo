@@ -174,6 +174,7 @@ a {
 .second_screen .container-box .catalog-box .catalog-item:nth-of-type(3n + 3) {
   margin-right: 0;
 }
+/* убрать размеры с img, они должны быть на классе .catalog-item, а тут max-width: 100%  */
 .second_screen .container-box .catalog-box .catalog-item img {
   width: 350px;
   height: 280px;
@@ -534,21 +535,25 @@ a {
   text-decoration-line: underline;
 }
 @media (max-width: 1194px) {
+  /* сделай вместо max-width -> width, как у тебя изначально прописано */
   .container-box {
     max-width: 950px;
   }
   .header_bottom img {
     max-width: 160px;
   }
+  /* лишнее */
   .second_screen .container-box {
     width: 1105px;
   }
+  /* лишнее */
   .second_screen .container-box .category-box {
     max-width: 1070px;
   }
   .second_screen .container-box .catalog-box {
     justify-content: center;
   }
+  /* height: auto */
   .second_screen .container-box .catalog-box .catalog-item img {
     width: 320px;
     height: 250px;
@@ -557,10 +562,12 @@ a {
     align-items: center;
     justify-content: center;
   }
+  /* height: auto */
   .blog .container-box .catalog-box .box img {
     width: 320px;
     height: 340px;
   }
+  /* container max-width: 950px, бесмысленно */
   .gallery .container-box .gallery-box {
     max-width: 1050px;
   }
@@ -580,6 +587,7 @@ a {
 }
 
 @media (max-width: 1110px) {
+  /* width убрать, так как выше разрешением уже будет прописано */
   .container-box {
     width: 970px;
     padding: 0 15px;
@@ -600,6 +608,7 @@ a {
     padding: 0 5px;
     max-width: 160px;
   }
+  /* сделай 100% по обстановке */
   .second_screen .container-box {
     width: 80%;
   }
@@ -767,10 +776,12 @@ a {
   .subscribe .container-box .subscribe-list ul li {
     font-size: 15px;
   }
+  /* margin-left 0, у него левее нет ничего */
   .subscribe .container-box .subscribe-form {
     margin-left: 11px;
     padding: 10px 17px;
   }
+  /* font-size минимум 12px */
   .subscribe .container-box .mail {
     font-size: 11px;
     padding: 8px 13px;
@@ -800,6 +811,7 @@ a {
 }
 
 @media (max-width: 600px) {
+/* сделай width 100% */
   .container-box {
     max-width: 450px;
   }
@@ -888,7 +900,7 @@ a {
     margin-top: 25px;
   }
 }
-
+/* 500 -> 480 */
 @media (max-width: 500px) {
   .container-box {
     max-width: 320px;
@@ -941,7 +953,7 @@ a {
     padding: 8px 11px;
   }
 }
-
+/* не нужен */
 @media (max-width: 360px) {
   .container-box {
   }
