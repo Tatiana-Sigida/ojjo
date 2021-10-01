@@ -536,19 +536,32 @@ a {
 }
 @media (max-width: 1194px) {
   /* сделай вместо max-width -> width, как у тебя изначально прописано */
-  .container-box {
+  /* .container-box {
     max-width: 950px;
+  } */
+  .container-box {
+    max-width: 1070px;
+  }
+  .header_bottom .container-box {
+    justify-content: center;
   }
   .header_bottom img {
     max-width: 160px;
   }
-  /* лишнее */
-  .second_screen .container-box {
-    width: 1105px;
+  .header_bottom img {
+    border-right: none;
   }
   /* лишнее */
-  .second_screen .container-box .category-box {
+  /* .second_screen .container-box {
+    width: 1105px;
+  } */
+  /* лишнее */
+  /* .second_screen .container-box .category-box {
     max-width: 1070px;
+  } */
+
+  .second_screen .container-box .category-box {
+    justify-content: center;
   }
   .second_screen .container-box .catalog-box {
     justify-content: center;
@@ -556,7 +569,7 @@ a {
   /* height: auto */
   .second_screen .container-box .catalog-box .catalog-item img {
     width: 320px;
-    height: 250px;
+    height: auto;
   }
   .blog .container-box .catalog-box {
     align-items: center;
@@ -565,12 +578,13 @@ a {
   /* height: auto */
   .blog .container-box .catalog-box .box img {
     width: 320px;
-    height: 340px;
+    height: auto;
   }
+
   /* container max-width: 950px, бесмысленно */
-  .gallery .container-box .gallery-box {
+  /* .gallery .container-box .gallery-box {
     max-width: 1050px;
-  }
+  } */
   .subscribe .container-box .subscribe-form {
     margin-left: 66px;
     padding: 15px 18px;
@@ -584,15 +598,19 @@ a {
     font-size: 13px;
     padding: 11px 20px;
   }
+
+  .footer .container-box .container-top {
+    justify-content: space-evenly;
+  }
+  .footer .container-box .container-bottom {
+    justify-content: space-around;
+  }
 }
 
 @media (max-width: 1110px) {
   /* width убрать, так как выше разрешением уже будет прописано */
   .container-box {
     width: 970px;
-    padding: 0 15px;
-    align-items: center;
-    justify-self: center;
   }
   .top-box .container-box {
     flex-direction: column;
@@ -607,6 +625,9 @@ a {
   .header_bottom img {
     padding: 0 5px;
     max-width: 160px;
+  }
+  .header_bottom img {
+    border-right: none;
   }
   /* сделай 100% по обстановке */
   .second_screen .container-box {
@@ -627,7 +648,6 @@ a {
   .second_screen .container-box .catalog-box .catalog-item:nth-of-type(2n + 2) {
     margin-right: 0;
   }
-
   .subscribe .container-box .padding {
     padding: 0;
   }
@@ -645,6 +665,8 @@ a {
   .footer .container-box .container-top {
     display: flex;
     flex-wrap: wrap;
+    max-width: 760px;
+    margin: 0 auto 45px;
   }
 }
 @media (max-width: 992px) {
@@ -655,7 +677,10 @@ a {
     font-size: 32px;
   }
   .header_bottom img {
-    max-width: 115px;
+    max-width: 125px;
+  }
+  .header_bottom img {
+    border-right: none;
   }
   .second_screen .container-box {
     padding-top: 80px;
@@ -673,7 +698,7 @@ a {
   }
   .second_screen .container-box .catalog-box .catalog-item img {
     width: 250px;
-    height: 180px;
+    height: auto;
   }
   .second_screen .container-box p {
     padding-bottom: 50px;
@@ -694,7 +719,7 @@ a {
   }
   .blog .container-box .catalog-box p {
     font-size: 16px;
-    bottom: 70px;
+    bottom: 35px;
   }
   .subscribe {
     padding-top: 100px;
@@ -717,20 +742,26 @@ a {
   .container-box {
     width: 550px;
   }
+  .header_bottom .container-box {
+    display: block;
+    text-align: center;
+  }
   .header_bottom img {
-    max-width: 97px;
+    max-width: 35%;
+  }
+  .header_bottom img {
+    border-right: none;
   }
   .our-salon .container-box .text-center {
     width: auto;
   }
   .second_screen .container-box .catalog-box .catalog-item img {
     width: 220px;
-    height: 150px;
+    height: auto;
   }
   .second_screen .container-box {
     padding: 70px 0;
   }
-
   .second_screen .container-box p {
     padding-bottom: 40px;
   }
@@ -743,6 +774,8 @@ a {
   }
   .second_screen .container-box .category-box a {
     font-size: 12px;
+    width: 27%;
+    margin-bottom: 10px;
   }
   .second_screen .container-box .catalog-box p {
     font-size: 16px;
@@ -764,14 +797,26 @@ a {
     font-size: 15px;
   }
   .blog .container-box h2 {
-    margin-top: 70px;
+    margin-top: 45px;
   }
   .blog .container-box h3 {
     font-size: 25px;
   }
+  .blog .container-box .catalog-box {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .blog .container-box .catalog-box .box {
+    margin-bottom: 15px;
+    margin-right: 0px;
+  }
+  .blog .container-box .catalog-box .box img {
+    width: 280px;
+    height: auto;
+  }
   .blog .container-box .catalog-box p {
     font-size: 16px;
-    bottom: 70px;
+    bottom: 45px;
   }
   .subscribe .container-box .subscribe-list ul li {
     font-size: 15px;
@@ -802,21 +847,22 @@ a {
   .footer .container-box .container-top a {
     margin-right: 10px;
   }
+  .footer .container-box .container-top {
+    text-align: center;
+  }
   .footer .container-box .container-bottom {
     display: block;
+    text-align: center;
   }
   .footer .container-box .container-bottom .font p {
-    text-align: left;
+    text-align: center;
   }
 }
 
 @media (max-width: 600px) {
-/* сделай width 100% */
+  /* сделай width 100% */
   .container-box {
-    max-width: 450px;
-  }
-  .header_bottom img {
-    max-width: 80px;
+    max-width: 100%;
   }
   .second_screen .container-box {
     padding: 50px 0;
@@ -836,11 +882,11 @@ a {
     margin-bottom: 10px;
   }
   .second_screen .container-box .category-box p {
-    font-size: 9px;
+    font-size: 12px;
   }
   .second_screen .container-box .catalog-box .catalog-item img {
     width: 160px;
-    height: 110px;
+    height: auto;
   }
   .second_screen .container-box .catalog-box p {
     font-size: 12px;
@@ -850,12 +896,16 @@ a {
     font-size: 23px;
     margin-bottom: 40px;
   }
+  .our-salon .container-box .text-center {
+    max-width: 95%;
+  }
   .our-salon .container-box .button {
     margin-bottom: 20px;
     margin-top: 34px;
   }
   .blog .container-box h3 {
     margin-bottom: 25px;
+    font-size: 24px;
   }
   .blog .container-box .catalog-box {
     display: flex;
@@ -868,15 +918,20 @@ a {
     font-size: 14px;
     bottom: 40px;
   }
-
   .blog .container-box .catalog-box .box img {
     width: 280px;
-    height: 300px;
+    height: auto;
   }
   .blog .container-box .button {
     margin-top: 20px;
     margin-bottom: 58px;
     font-size: 15px;
+  }
+  .gallery .container-box .gallery-box .a {
+    display: block;
+  }
+  .gallery .container-box .gallery-box .b {
+    display: block;
   }
   .subscribe {
     padding-top: 80px;
@@ -893,6 +948,9 @@ a {
     max-width: 100%;
     padding: 60px 20px 20px;
   }
+  .footer .container-box .container-top h2 {
+    border: 100%;
+  }
   .footer .container-box .container-top .footer_column_3 {
     margin-top: 25px;
   }
@@ -901,64 +959,115 @@ a {
   }
 }
 /* 500 -> 480 */
-@media (max-width: 500px) {
+@media (max-width: 480px) {
   .container-box {
-    max-width: 320px;
+    padding: 0 10px;
+    max-width: 100%;
   }
   .user-box {
     flex-wrap: wrap;
+    justify-content: center;
+  }
+  .user-box a:not(:last-child) {
+    margin-right: 33px;
+    max-width: 20%;
   }
   .user-box img {
     height: 18px;
-    display: none;
+  }
+  .header_center {
+    padding-top: 220px;
+  }
+  .header_center h1 {
+    font-size: 28px;
+  }
+  .header_center a {
+    font-size: 16px;
   }
   .header_bottom img {
-    max-width: 56px;
+    max-width: 49%;
   }
   .second_screen .container-box {
     padding: 40px 0;
   }
+  .second_screen .container-box .category-box a {
+    width: 35%;
+  }
+  .second_screen .container-box .catalog-box .catalog-item {
+    margin-right: 0;
+  }
+  .second_screen .container-box .catalog-box .catalog-item:nth-of-type(3n + 3) {
+    margin-right: 0;
+  }
+  .second_screen .container-box .catalog-box p {
+    font-size: 15px;
+    bottom: 20px;
+  }
   .second_screen .container-box .catalog-box .catalog-item img {
-    width: 123px;
-    height: 110px;
+    height: auto;
+    width: 100%;
   }
   .our-salon {
     padding-top: 60px;
   }
   .our-salon .container-box h2 {
-    font-size: 20px;
+    font-size: 19x;
     margin-bottom: 30px;
+  }
+  .our-salon .container-box .text-center {
+    font-size: 14px;
+    max-width: 90%;
   }
   .our-salon .container-box .button {
     font-size: 13px;
   }
+  .blog .container-box h2 {
+    margin-top: 35px;
+  }
   .blog .container-box h3 {
     font-size: 23px;
+  }
+  .blog .container-box .catalog-box p {
+    font-size: 15px;
+    bottom: 30px;
   }
   .blog .container-box .catalog-box .box {
     margin-bottom: 15px;
   }
   .blog .container-box .catalog-box .box img {
     width: 250px;
-    height: 260px;
+    height: auto;
   }
   .blog .container-box .button {
     font-size: 13px;
+    margin-bottom: 48px;
   }
   .gallery .container-box h3 {
-    font-size: 27px;
+    font-size: 25px;
     margin-bottom: 34px;
+  }
+  .subscribe {
+    padding-top: 60px;
+  }
+  .subscribe .container-box p {
+    font-size: 19px;
+  }
+  .subscribe .container-box h2 {
+    font-size: 24px;
+    padding-bottom: 40px;
   }
   .subscribe .container-box .mail {
     padding: 8px 11px;
   }
 }
 /* не нужен */
-@media (max-width: 360px) {
+/* @media (max-width: 360px) {
   .container-box {
+    width: 100%;
   }
+
   .menu-box {
-    font-size: 11px;
+    font-size: 12px;
   }
   .menu-box ul li:not(:last-child) {
     margin-right: 30px;
@@ -978,7 +1087,7 @@ a {
   }
 
   .header_bottom img {
-    max-width: 49px;
+    max-width: 45%;
   }
   .second_screen .container-box {
     padding: 30px 0;
@@ -990,8 +1099,22 @@ a {
   .second_screen .container-box .catalog-box .catalog-item {
     margin-bottom: 25px;
   }
+  .second_screen .container-box .category-box a {
+    width: 60%;
+  }
+  .second_screen .container-box .catalog-box .catalog-item {
+    margin-right: 0;
+  }
+  .second_screen .container-box .catalog-box .catalog-item:nth-of-type(3n + 3) {
+    margin-right: 0;
+  }
   .second_screen .container-box .catalog-box p {
-    font-size: 10px;
+    font-size: 15px;
+    bottom: 20px;
+  }
+  .second_screen .container-box .catalog-box .catalog-item img {
+    height: auto;
+    width: 100%;
   }
   .our-salon .container-box .text-center {
     font-size: 13px;
@@ -1010,6 +1133,6 @@ a {
     display: block;
   }
   .footer .container-box .container-bottom .font p {
-    text-align: left;
+    text-align: center;
   }
-}
+} */
